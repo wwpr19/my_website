@@ -1,0 +1,79 @@
+/* Navigation Bar Styles */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  background: #A1D44A;
+  padding: 1em 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.main-nav a:hover {
+  background: #7D4AD4;
+  color: #fff;
+}
+
+/* Top Banner Styles */
+.top-banner {
+  width: 100%;
+  background: linear-gradient(90deg, #D44A5C 0%, #4ad4c2 25%, #A1D44A 75%, #9a83ff 100%);
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+/*---------smaller phone area-------*/
+@media (max-width: 600px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+}
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .eateries,
+  .personalized-items {
+    max-width: 90%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  main {
+    padding: 1em;
+    gap: 0.5em;
+  }
+  .eateries,
+  .personalized-items {
+    padding: 1em;
+    font-size: 1em;
+  }
+}

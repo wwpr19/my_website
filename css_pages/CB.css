@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0em;
+    line-height: 2em;
+    font-size: medium;
+    background-color: #4ad4c2;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.top-banner {
+    width: 100%;
+    background: linear-gradient(90deg, #D44A5C 0%, #4ad4c2 25%, #A1D44A 75%, #9a83ff 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h1 {
+    color: #A1D44A;
+    text-align: center;
+    margin: 1em 0 0 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fafae7d8;
+    border: 2px solid #D44A5C;
+    border-radius: 12px;
+    padding: 1em 2em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin: 1em;
+}
+
+.eateries,
+.personalized-items {
+    color: #333;
+    text-align: left;
+    padding: 1em 2.5em; 
+    
+    border: 6px solid #c5c5c5;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    flex: 1 1 300px;  
+}
+
+main {
+    padding: 2em;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    margin: 2em auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+ul{
+    color: #D44A5C;
+}

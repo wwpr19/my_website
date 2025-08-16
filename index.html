@@ -9,10 +9,12 @@
 </head>
 
 <body>
+    <div class="top-banner">
+        🎁 Welcome to the Gift Basket Shop! 🎁
+    </div>
     <main>
-        <h1>Gifts baskets</h1>
         <img src="Images/basket.png" alt="main basket image">
-        <p>This website is about giving gifts to those we love</p>
+        <p class="banner">This website is about giving gifts to those we love</p>
         <h2 class="wave">
   <span>W</span><span>h</span><span>a</span><span>t</span>
   <span> </span>
@@ -23,24 +25,41 @@
   <span>p</span><span>r</span><span>o</span><span>v</span><span>i</span><span>d</span><span>e</span>
 </h2>
         <!--Add a navagator bar-->
-        <ul>
-            <li>Custom baskets </li>
-                <p>give us a list of items and we will arrange them for you</p>
-            <li>General baskets for everyone</li>
-                <p>Great gift ideas if you cant think of something they would want</p>
-            <li>Our custom item shop</li>
-                <p>Don't want a basket? We still can help you with our custom items</p>
-        </ul>
-        <div class="card">
-  <h3>Contact Info</h3>
-  <p>
-  Click <a href="Here">here</a> to contact us if you have any issues or tell us how GREAT your basket is!
-</p>
-</div>
 
+        <!--Cards Section-->
+        <div class="card-container">
+            <a href="html/custom_baskets.html" class="card-link">
+                <div class="card">
+                    <h3>Custom Baskets</h3>
+                    <p>Give us a list of items and we will arrange them for you.</p>
+                </div>
+            </a>
+            <a href="html/general_baskets.html" class="card-link">
+                <div class="card">
+                    <h3>General Baskets for Everyone</h3>
+                    <p>Great gift ideas if you can't think of something they would want.</p>
+                </div>
+            </a>
+            <a href="html/custom_shop.html" class="card-link">
+                <div class="card">
+                    <h3>Our Custom Item Shop</h3>
+                    <p>Don't want a basket? We still can help you with our custom items.</p>
+                </div>
+            </a>
+        </div>
+        <div class="card-container">
+            <a href="html/contact_us.html" class="card-link">
+                <div class="card">
+                    <h3>Contact Info</h3>
+                    <p>
+                        Click here to contact us if you have any issues or tell us how GREAT your basket is!
+                    </p>
+                </div>
+            </a>
+        </div>
 
     </main>
-
+<!--add sepration banner to footer-->
     <footer>
         <p>&copy; 2025 Wayne</p>
     </footer>

@@ -1,73 +1,119 @@
-
-
- /*this is a basis of the wholewebsite of the website*/ 
+/*this is a basis of the whole website*/
 * {
-    box-sizing: border-box;
-    margin: 0em;
-    line-height: 2em;
-    font-size: medium;
-    background-color: #4ad4c2;
-    font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  line-height: 2;
+  font-size: medium;
+  background-color: #4ad4c2;
+  font-family: 'Quicksand', sans-serif;
 }
 
-/*type slector*/
-p {
-    color: #7D4AD4;
+p { color: #7D4AD4; }
+ul p { color: #D44A5C; }
+
+/* Banner & Header */
+.top-banner {
+  width: 100%;
+  background: linear-gradient(90deg, #D44A5C 0%, #4ad4c2 25%, #A1D44A 75%, #9a83ff 100%);
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
-
-/*relational selector*/
-ul p {
-    color: #D44A5C;
-
+.banner {
+  font-size: 1.2em;
+  color: #D44A5C;
+  text-align: center;
+  margin: 1em 0 0 0;
+  font-weight: bold;
 }
-
-/*Full discloser I had AI help me animated the text. Please let me know if thats not okay*/
-
-/* class selector*/
+.wave {
+  color: #D44A5C;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 1em;
+}
 .wave span {
   display: inline-block;
   animation: waveMotion 1s infinite ease-in-out;
 }
-
-.wave span:nth-child(1)  { animation-delay: 0s; }
-.wave span:nth-child(2)  { animation-delay: 0.05s; }
-.wave span:nth-child(3)  { animation-delay: 0.1s; }
-.wave span:nth-child(4)  { animation-delay: 0.15s; }
-.wave span:nth-child(5)  { animation-delay: 0.2s; }
-.wave span:nth-child(6)  { animation-delay: 0.25s; }
-.wave span:nth-child(7)  { animation-delay: 0.3s; }
-.wave span:nth-child(8)  { animation-delay: 0.35s; }
-.wave span:nth-child(9)  { animation-delay: 0.4s; }
-.wave span:nth-child(10) { animation-delay: 0.45s; }
-.wave span:nth-child(11) { animation-delay: 0.5s; }
-.wave span:nth-child(12) { animation-delay: 0.55s; }
-.wave span:nth-child(13) { animation-delay: 0.6s; }
-.wave span:nth-child(14) { animation-delay: 0.65s; }
-.wave span:nth-child(15) { animation-delay: 0.7s; }
-.wave span:nth-child(16) { animation-delay: 0.75s; }
-.wave span:nth-child(17) { animation-delay: 0.8s; }
-.wave span:nth-child(18) { animation-delay: 0.85s; }
-.wave span:nth-child(19) { animation-delay: 0.9s; }
-.wave span:nth-child(20) { animation-delay: 0.95s; }
-.wave span:nth-child(21) { animation-delay: 1s; }
-.wave span:nth-child(22) { animation-delay: 1.05s; }
-.wave span:nth-child(23) { animation-delay: 1.1s; }
-.wave span:nth-child(24) { animation-delay: 1.15s; }
+.wave span:nth-child(n) { animation-delay: calc((var(--n, 0) - 1) * 0.05s); }
+.wave span:nth-child(1) { --n:1; } .wave span:nth-child(2) { --n:2; }
+.wave span:nth-child(3) { --n:3; } .wave span:nth-child(4) { --n:4; }
+.wave span:nth-child(5) { --n:5; } .wave span:nth-child(6) { --n:6; }
+.wave span:nth-child(7) { --n:7; } .wave span:nth-child(8) { --n:8; }
+.wave span:nth-child(9) { --n:9; } .wave span:nth-child(10) { --n:10; }
+.wave span:nth-child(11) { --n:11; } .wave span:nth-child(12) { --n:12; }
+.wave span:nth-child(13) { --n:13; } .wave span:nth-child(14) { --n:14; }
+.wave span:nth-child(15) { --n:15; } .wave span:nth-child(16) { --n:16; }
+.wave span:nth-child(17) { --n:17; } .wave span:nth-child(18) { --n:18; }
+.wave span:nth-child(19) { --n:19; } .wave span:nth-child(20) { --n:20; }
+.wave span:nth-child(21) { --n:21; } .wave span:nth-child(22) { --n:22; }
+.wave span:nth-child(23) { --n:23; } .wave span:nth-child(24) { --n:24; }
 
 @keyframes waveMotion {
   0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-10px); }
+  50% { transform: translateY(-10px); }
 }
 
-/*Combination selector*/
+/* Card Layout */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  margin: 2em auto;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+.card {
+  flex: 1 1 250px;
+  max-width: 300px;
+  min-width: 220px;
+  background-color: #9a83ff;
+  color: #f0f8ff;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border: 3px dotted #A1D44A;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
 .card p {
   background-color: #9a83ff;
   color: #f0f8ff;
 }
-/*pseudo-class*/
-a:hover{
-    color:#ff0000
+.card-link:hover .card {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
 }
-/* Color that is to bright that is complimentary
-color: #A1D44A;
-*/
+
+/* Links */
+a:hover { color: #ff0000; }
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+/* get more images */
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em 0;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}

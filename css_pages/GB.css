@@ -1,4 +1,4 @@
-/* Navigation Bar Styles */
+/* ------------------ Navigation Bar Styles ------------------ */
 .main-nav {
   display: flex;
   justify-content: center;
@@ -22,6 +22,7 @@
   color: #fff;
 }
 
+/* ------------------ Top Banner ------------------ */
 .top-banner {
   width: 100%;
   background: linear-gradient(90deg, #D44A5C 0%, #4ad4c2 25%, #A1D44A 75%, #9a83ff 100%);
@@ -33,42 +34,123 @@
   letter-spacing: 1px;
 }
 
-
-
-
-/*---------smaller phone area-------*/
-@media (max-width: 600px) {
-  .main-nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-  }
+/* ------------------ Intro Section ------------------ */
+.intro {
+  text-align: center;
+  margin: 2em 0 1.5em 0;
 }
+.intro h1 {
+  color: #7D4AD4;
+  margin-bottom: 0.5em;
+}
+.intro p {
+  color: #333;
+  font-size: 1.1em;
+}
+
+/* ------------------ Basket Gallery (Grid) ------------------ */
+.basket-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto 2em auto;
+  padding: 1em;
+}
+
+.gift-basket {
+  background: #fff;
+  border: 2px dotted #A1D44A;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.5em 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.gift-basket:hover {
+  box-shadow: 0 8px 24px rgba(154,131,255,0.15);
+  transform: translateY(-5px) scale(1.03);
+}
+.gift-basket h2 {
+  color: #D44A5C;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+.gift-basket img {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+}
+.gift-basket p {
+  color: #4ad4c2;
+  font-size: 1em;
+}
+
+/* ------------------ Footer ------------------ */
+footer {
+  text-align: center;
+  padding: 1em 0;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: #A1D44A;
+  color: #fff;
+  margin-top: 2em;
+}
+.home-link {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  background: #9a83ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.home-link:hover {
+  background: #7D4AD4;
+}
+
+/* ------------------ Responsive Design ------------------ */
+/* Tablet: Stack grid columns and adjust padding */
 @media (max-width: 900px) {
-  main {
-    flex-direction: column;
-    align-items: center;
+  .basket-gallery {
+    grid-template-columns: 1fr;
+    padding: 0.5em;
   }
-  .eateries,
-  .personalized-items {
+  .gift-basket {
     max-width: 90%;
+    margin: 0 auto;
   }
 }
 
-
+/* Phone: Stack nav links, adjust gallery and text */
 @media (max-width: 600px) {
   .main-nav {
     flex-direction: column;
     align-items: center;
     gap: 1em;
   }
-  main {
-    padding: 1em;
-    gap: 0.5em;
+  .basket-gallery {
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 0.5em;
   }
-  .eateries,
-  .personalized-items {
-    padding: 1em;
+  .gift-basket {
+    padding: 1em 0.5em;
+    font-size: 1em;
+  }
+  .intro h1 {
+    font-size: 1.8em;
+  }
+  .intro p {
     font-size: 1em;
   }
 }

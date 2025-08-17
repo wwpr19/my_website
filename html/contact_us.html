@@ -3,27 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css_pages/CU.css" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-    <!-- change wording -->
+    <!-- Top banner with welcome message -->
     <div class="top-banner">
-        🎁 Welcome to the Gift Basket Shop! 🎁
+        🎁 Welcome to the Contact Us page! 🎁
     </div>
-          <nav class="main-nav">
-  <a href="../index.html">Home</a>
-  <a href="custom_baskets.html">Custom Baskets</a>
-  <a href="general_baskets.html">General Baskets</a>
-  <a href="custom_shop.html">Custom Shop</a>
-  <a href="contact_us.html">Contact Us</a>
+    <!-- Main navigation menu -->
+    <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="custom_baskets.html">Custom Baskets</a>
+        <a href="general_baskets.html">General Baskets</a>
+        <a href="custom_shop.html">Custom Shop</a>
+        <a href="contact_us.html">Contact Us</a>
     </nav>
-    <!--make this page more informative-->
-    <p>We are currently working on this page. Please check back later for updates!</p>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+        <p id="CU_intro">
+            Have a question, suggestion, or need help with your order? We’d love to hear from you! Fill out the form below or use the contact details provided.
+        </p>
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-details">
+            <h2>Other Ways to Reach Us</h2>
+            <p>Email: <a href="mailto:info@giftbasketshop.com">info@giftbasketshop.com</a></p>
+            <p>Phone: (555) 123-4567</p>
+            <p>Address: 123 Basket Lane, Gift City, USA</p>
+        </div>
+    </section>
 </body>
 <footer>
-        <p>&copy; 2025 Wayne</p>
-        <a href="index.html" class="home-link">🏠 Home</a>
-    </footer>
+    <p>&copy; 2025 Wayne</p>
+    <a href="../index.html" class="home-link">🏠 Home</a>
+</footer>
 </html>
 

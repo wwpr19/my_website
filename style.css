@@ -6,6 +6,7 @@
   font-size: medium;
   background-color: #4ad4c2;
   font-family: 'Quicksand', sans-serif;
+
 }
 
 p { color: #7D4AD4; }
@@ -152,6 +153,8 @@ footer {
   background: #7D4AD4;
   color: #fff;
 }
+
+
 /*gallery section styles*/
 .gallery-section{
   padding: 1em 2em;
@@ -229,6 +232,43 @@ footer {
     color: #333;
 }
 
+.competitors {
+    margin: 2em 0;
+    padding: 1em;
+    background: #f9f9f9;
+    border: 2px solid #D44A5C;
+    border-radius: 12px;
+    max-width: ;
+    
+}
+.competitors p{
+  text-align: center;
+  background: #f9f9f9;
+   color: #A1D44A;
+     text-shadow:
+    -1px -1px 0 #006e21,  
+     1px -1px 0 #006e21,
+    -1px  1px 0 #006e21,
+     1px  1px 0 #006e21;
+}
+.competitors a {
+    display: flex;
+    margin: 0.5em 0;
+    color: #A1D44A;
+    justify-content: center;
+  text-shadow:
+    -1px -1px 0 #006e21,  
+     1px -1px 0 #006e21,
+    -1px  1px 0 #006e21,
+     1px  1px 0 #006e21;
+     align-items: center;
+     background: #f9f9f9;
+}
+
+.competitors a:hover {
+    font-weight: bold;
+
+}
 
 /* Custom Baskets section */
 .cb_intro h1 {
@@ -245,7 +285,22 @@ footer {
     padding: 1em 2em;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     margin: 1em;
+    color: #A1D44A;
+     background: #ffffffcc; /* light overlay */
+  backdrop-filter: contrast(150%); /* adds a subtle glass effect */
+  text-shadow:
+    -1px -1px 0 #006e21,  
+     1px -1px 0 #006e21,
+    -1px  1px 0 #006e21,
+     1px  1px 0 #006e21;
+animation: fadeInUp 0.6s ease-out;
 }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
 /* sections styles */
 .eateries,
 .personalized-items {
@@ -348,6 +403,11 @@ footer {
   margin: 1em;
   text-emphasis-color: #A1D44A;
   color: #A1D44A;
+    text-shadow:
+    -1px -1px 0 #006e21,  
+     1px -1px 0 #006e21,
+    -1px  1px 0 #006e21,
+     1px  1px 0 #006e21;
 }
 .GB_intro p {
   text-align: center;
@@ -363,6 +423,11 @@ footer {
   padding: 1em 2em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   margin: 1em;
+    text-shadow:
+    -1px -1px 0 #006e21,  
+     1px -1px 0 #006e21,
+    -1px  1px 0 #006e21,
+     1px  1px 0 #006e21;
 }
 
 /*custom Shop*/
@@ -377,6 +442,11 @@ footer {
     padding: 2em 1.5em;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      text-shadow:
+    -1px -1px 0 #006e21,  
+     1px -1px 0 #006e21,
+    -1px  1px 0 #006e21,
+     1px  1px 0 #006e21;
 }
 .shop-intro h1 {
     color: #A1D44A;
@@ -448,7 +518,11 @@ footer {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     padding: 2em;
     text-align: center;
-   
+     text-shadow:
+    -1px -1px 0 #006e21,  
+     1px -1px 0 #006e21,
+    -1px  1px 0 #006e21,
+     1px  1px 0 #006e21;
 }
 .contact-form {
     display: flex;
@@ -562,26 +636,7 @@ i {
 
 /*-------mobile-------*/
 
-@media (max-width: 600px) {
-  .main-nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-  }
-}
-@media (max-width: 900px) {
-  main {
-    flex-direction: column;
-    align-items: center;
-  }
-  .eateries,
-  .personalized-items {
-    max-width: 90%;
-  }
-}
-
-
-@media (max-width: 600px) {
+@media (max-width: 780px) {
   .main-nav {
     flex-direction: column;
     align-items: center;
@@ -595,5 +650,81 @@ i {
   .personalized-items {
     padding: 1em;
     font-size: 1em;
+  }
+}
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .eateries,
+  .personalized-items {
+    max-width: 90%;
+  }
+}
+
+/* Hamburger menu base styles */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.nav-toggle-label span {
+  display: block;
+  height: 4px;
+  width: 28px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Desktop nav links */
+.nav-links {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
+/* Hamburger menu for mobile */
+@media (max-width: 780px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  .nav-toggle-label {
+    display: flex;
+    margin-left: 1em;
+    margin-top: 0.5em;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #A1D44A;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 100;
+  }
+  .nav-links a {
+    padding: 1em;
+    border-bottom: 1px solid #7D4AD4;
+    width: 100%;
+    text-align: left;
+  }
+  .nav-toggle:checked + .nav-toggle-label + .nav-links {
+    display: flex;
   }
 }
